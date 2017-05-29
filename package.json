@@ -1,0 +1,12 @@
+{
+  "name": "requiem",
+  "version": "1.0.0",
+  "description": "Mirror your ghost blog with jekyll!",
+  "main": "index.js",
+  "bin": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "david cako",
+  "license": "GPL-3.0"
+}
