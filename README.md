@@ -11,4 +11,4 @@ This was created as a way to backup and replicate my Ghost-based blog on Github,
 
 `requiem json_dump_path output_path`
 
-`json_dump_path` is the path of the file obtained at YOURBLOG.COM/ghost/settings/labs -> 'export'.
+`json_dump_path` is the path of the file obtained at *YOURBLOG.COM/ghost/settings/labs* -> **export**.
