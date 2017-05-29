@@ -1,5 +1,5 @@
 # requiem
-Export Ghost blog JSON dumps to Jekyll
+**Export Ghost blog JSON dumps to Jekyll.**
 
 This was created as a way to backup and replicate my Ghost-based blog on Github, however it can easily be used to migrate your Ghost blog entirely to Jekyll.
 
