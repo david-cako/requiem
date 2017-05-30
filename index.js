@@ -35,6 +35,8 @@ for (i = 0; i < posts.length; i++) {
     stream.write('title: "' + post['title'] + '"\n');
     stream.write('date: "' + post['published_at'] + '"\n');
     stream.write('---\n\n'); 
+    stream.write('# ' + post['title'] + '\n\n'); 
+    stream.write('<sup>' + post['published_at'].split(' ')[0] + '</sup>\n\n');
     stream.write(post['markdown']);
     stream.end();
 }
