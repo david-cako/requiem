@@ -28,6 +28,8 @@ for (i = 0; i < posts.length; i++) {
     if (post['status'] != 'published') {
         continue;
     }
+    console.log("exporting: " + post.title);
+    console.log(post);
     var fileName = post['published_at'].split(' ')[0] + '-' + post['slug'] + '.md';
     var stream = fs.createWriteStream(fileName);
 
