@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
 	"time"
 )
@@ -16,6 +15,7 @@ type GhostPost struct {
 	Created_at  time.Time
 	Updated_at  time.Time
 	Publised_at time.Time
+	Url         string
 }
 
 type GhostPostsResponse struct {
@@ -31,7 +31,7 @@ func GetGhostPosts(domain string, apiKey string) (posts GhostPostsResponse, err 
 	}
 	defer r.Body.Close()
 	if r.StatusCode != 200 {
-		return posts, errors.New(fmt.Sprintf("GetGhostPosts error: %s", r.Status))
+		return posts, fmt.Errorf("GetGhostPosts error: %s", r.Status)
 	}
 
 	d := json.NewDecoder(r.Body)
@@ -52,7 +52,7 @@ func GetGhostPages(domain string, apiKey string) (pages GhostPagesResponse, err 
 	}
 	defer r.Body.Close()
 	if r.StatusCode != 200 {
-		return pages, errors.New(fmt.Sprintf("GetGhostPages error: %s", r.Status))
+		return pages, fmt.Errorf("GetGhostPages error: %s", r.Status)
 	}
 
 	d := json.NewDecoder(r.Body)
